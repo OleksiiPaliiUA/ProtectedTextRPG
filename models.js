@@ -1,10 +1,15 @@
 let a = 10, b = 15 // Приклад
 
+
+class player {
+    password // Password
+    mnemonicCode // String
+}
+
 class character { // Blockchain
     // Basic parameters/Базові параметри
     id // Int
     name // String
-    password // Password
     level // Int
     gold // Int
     experience // Int
@@ -49,7 +54,7 @@ class item { // Blockchain
     id // Int
     level // Int
     name // String
-    ownerId // Int, 0 - no owner
+    ownerId // Int, -1 - no owner
     requiredRole // Int
     slotName // String
     rarity // Int ('1,2,3,4' = 'Common,Rare,Epic,Legendary')
@@ -59,7 +64,7 @@ class item { // Blockchain
     changeDodge // Int
 }
 
-class location {
+class location { // MongoDB
     id // Int
     name // String
     text // String
@@ -82,7 +87,7 @@ class gameEvent { // MongoDB
 
 class gameQuest { // MongoDB
     id // Int
-    text // Int
+    text // String
     accessButtonText // String
     declineButtonText // String
     takeLocationId // Int
