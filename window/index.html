@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script src="./bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+    <script src="chai.js" type="text/javascript"></script>
+    <script type="module" src="script.js"></script>
+    <title>RPG Game. Main Window</title>
+  </head>
+  <body>
+    <div id="gameScreen">
+      <div class="col-xs-3" >
+        <table class="inventory" id="inventory">
+          <tr>
+            <td id="1" class="slotHide"></td>
+            <td id="2" class="slotHide"></td>
+            <td id="3" class="slotHide"></td>
+          </tr>
+          <tr>
+            <td id="4" class="slotHide"></td>
+            <td id="5" class="slotHide"></td>
+            <td id="6" class="slotHide"></td>
+          </tr>
+          <tr>
+            <td id="7" class="slotHide"></td>
+            <td id="8" class="slotHide"></td>
+            <td id="9" class="slotHide"></td>
+          </tr>
+          <tr>
+            <td id="10" class="slotHide"></td>
+            <td id="11" class="slotHide"></td>
+            <td id="12" class="slotHide"></td>
+          </tr>
+          <tr>
+            <td id="13" class="slotHide"></td>
+            <td id="14" class="slotHide"></td>
+            <td id="15" class="slotHide"></td>
+          </tr>
+          <tr>
+            <td id="16" class="slotHide"></td>
+            <td id="17" class="slotHide"></td>
+            <td id="18" class="slotHide"></td>
+          </tr>
+          <!--Item stats-->
+          <tr class="whiteText">
+            <td>ID: </td>
+            <td id="itemId" colspan="2"></td>
+          </tr>
+          <tr class="whiteText">
+            <td>Назва: </td>
+            <td id="itemName" colspan="2"></td>
+          </tr>
+          <tr class="whiteText">
+            <td>Рівень: </td>
+            <td id="itemLevel" colspan="2"></td>
+          </tr>
+          <tr class="whiteText">
+            <td>Клас: </td>
+            <td id="itemRequiredRole" colspan="2"></td>
+          </tr>
+          <tr class="whiteText">
+            <td>Тип: </td>
+            <td id="itemSlotName" colspan="2"></td>
+          </tr>
+          <tr class="whiteText">
+            <td>Рідкість: </td>
+            <td id="itemRarity" colspan="2"></td>
+          </tr>
+          <tr class="whiteText">
+            <td>Здоров'я: </td>
+            <td id="itemChangeHealth" colspan="2"></td>
+          </tr>
+          <tr class="whiteText">
+            <td>Мана: </td>
+            <td id="itemChangeMana" colspan="2"></td>
+          </tr>
+          <tr class="whiteText">
+            <td>Шкода: </td>
+            <td id="itemChangeDamage" colspan="2"></td>
+          </tr>
+          <tr class="whiteText">
+            <td>Ухилення: </td>
+            <td id="itemChangeDodge" colspan="2"></td>
+          </tr>
+          <tr>
+            <td><button id="itemPutOn" class="inventoryButton">Надіти</button></td>
+            <td></td>
+            <td><button id="itemTrade" class="inventoryButton">Передати</button></td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-xs-3">
+        <table class="playerstats" id="playerstats">
+          <!--Player stats-->
+          <tr class="whiteText">
+            <td><img id="roleImage" style="height: 93px ; width: 100px;"></td>
+            <td id="characterName" colspan="2"></td>
+          </tr>
+          <tr class="whiteText">
+  
+          </tr>
+          <tr class="whiteText">
+            <td>ID: </td>
+            <td id="characterId" colspan="2"></td>
+          </tr>
+          <tr class="whiteText">
+            <td>Рівень: </td>
+            <td id="characterLevel" colspan="2"></td>
+          </tr>
+          <tr class="whiteText">
+            <td>Досвід: </td>
+            <td id="characterExperience" colspan="2"></td>
+          </tr>
+          <tr class="whiteText">
+            <td>Клас: </td>
+            <td id="characterRole" colspan="2"></td>
+          </tr>
+          <tr class="whiteText">
+            <td>Вільні бали: </td>
+            <td id="characterUpgradePoints" colspan="2"></td>
+          </tr>
+          <tr class="whiteText">
+            <td><img src="images/strength.png" style="height: 45px ; width: 52px;"></td>
+            <td id="characterStrength"></td>
+            <td><button id="buttonStrengthPlus" class="buttonAtributePlus disabled">+</button></td>
+          </tr>
+          <tr class="whiteText">
+            <td><img src="images/agility.png" style="height: 45px ; width: 52px;"></td>
+            <td id="characterAgility" ></td>
+            <td><button id="buttonAgilityPlus" class="buttonAtributePlus disabled">+</button></td>
+          </tr>
+          <tr class="whiteText">
+            <td><img src="images/intelligence.png" style="height: 45px ; width: 52px;"></td>
+            <td id="characterIntelligence"></td>
+            <td><button id="buttonIntelligencePlus" class="buttonAtributePlus disabled">+</button></td>
+          </tr>
+          <tr class="whiteText">
+            <td><img src="images/charisma.png" style="height: 45px ; width: 52px;"></td>
+            <td id="characterCharisma"></td>
+            <td><button id="buttonCharismaPlus" class="buttonAtributePlus disabled">+</button></td>
+          </tr>
+          <tr>
+            <td class="invisibleTd"></td>
+            <td id="playerHead" class="slotHide"></td>
+            <td class="invisibleTd"></td>
+          </tr>
+          <tr>
+            <td id="playerRing" class="slotHide"></td>
+            <td id="playerBody" class="slotHide"></td>
+            <td id="playerGloves" class="slotHide"></td>
+          </tr>
+          <tr>
+            <td class="invisibleTd"></td>
+            <td id="playerBelt" class="slotHide"></td>
+            <td class="invisibleTd"></td>
+          </tr>
+          <tr>
+            <td class="invisibleTd"></td>
+            <td id="playerLegs" class="slotHide"></td>
+            <td><button class="inventoryButton disabled" id="undressAll">Зняти все</button></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <h2 class="locationName" id="locationName"></h2>
+        <p class="locationText" id="locationText"></p>
+        <table class="locationTableWithButtons">
+          <tr>
+            <td><button id="locationTakeQuest" class="locationButton disabled">Take Quest</button></td>
+            <td><button id="locationYes" class="locationButton disabled">Yes</button></td>
+            <td><button id="locationNext" class="locationButton"></button></td>
+            <td><button id="locationNo" class="locationButton disabled">No</button></td>
+          </tr>
+        </table>
+        <table class="actualPoints">
+          <tr>
+            <td><img src="images/gold.png" style="height: 56px ; width: 60px;"></td>
+            <td id="characterGold" class="whiteText" style="padding-left: 15px"></td>
+            <td class="statText">Статистика: </td>
+          </tr>
+          <tr>
+            <td><img src="images/health.png" style="height: 55px ; width: 60px;"></td>
+            <td id="characterHealth" class="whiteText" style="padding-left: 15px"></td>
+            <td class="statText">Пройдено локацій:</td>
+            <td class="whiteText" id="completedLocations"></td>
+          </tr>
+          <tr>
+            <td><img src="images/mana.png" style="height: 55px ; width: 60px;"></td>
+            <td id="characterMana" class="whiteText" style="padding-left: 15px"></td>
+            <td class="statText">Пройдено квестів:</td>
+            <td class="whiteText" id="completedQuests">0</td>
+          </tr>
+          <tr>
+            <td><img src="images/damage.png" style="height: 55px ; width: 60px;"></td>
+            <td id="characterDamage" class="whiteText" style="padding-left: 15px"></td>
+            <td class="statText">Пройдено ігрових подій:</td>
+            <td class="whiteText" id="completedGameEvents">0</td>
+          </tr>
+          <tr>
+            <td><img src="images/dodge.png" style="height: 55px ; width: 60px;"></td>
+            <td id="characterDodge" class="whiteText" style="padding-left: 15px"></td>
+            <td><button id="saveGame" class="locationButton" style="margin-left: 270px">Зберегти прогрес</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="authScreen">
+      <table style="width: 1264px">
+        <tr>
+          <td>
+            <p class="authText">Ім'я:</p>
+          </td>
+          <td>
+            <input type="text" id="playerLogin" size="50">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="authText">Пароль: </p>
+          </td>
+          <td>
+            <input type="text" id="playerPassword" size="50">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="authText">Ключ-фраза: </p>
+          </td>
+          <td>
+            <input type="text" id="playerMnemonicCode" size="50">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button id="playerAuth" class="authButton">Авторизація</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

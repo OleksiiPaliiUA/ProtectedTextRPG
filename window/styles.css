@@ -1,0 +1,175 @@
+html {
+    background-color: #333;
+}
+
+
+#inventory {
+    float: left;
+}
+
+.playerstats {
+    float: right;
+}
+
+.stats {
+    display: block;
+    float: center;
+}
+
+.actualPoints {
+    display: block;
+    float: center;
+}
+
+input {
+    background-color: #333;
+    color: white;
+    border-color: white;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.locationName {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+    text-align: center;
+    display: block;
+    background-color: #333;
+    margin-bottom: 0px;
+}
+
+.locationText {
+    margin: 0px 0px 0px 0px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    height: 245px;
+    text-align: center;
+    display: block;
+    background-color: #333;
+    color: white;
+}
+
+.locationButton {
+    background-color: #BF942C;
+    text-align: center;
+    color: white;
+    text-shadow: gray 1px 1px;
+    width: 160px;
+    height: 40px;
+}
+
+.locationTableWithButtons {
+    display: block;
+    background-color: #333;
+}
+
+.slot {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #33302d;
+    width: 100px;
+    height: 60px;
+    background-color: #BF942C;
+    display: fixed;
+}
+
+.slotActive {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #33302d;
+    width: 100px;
+    height: 60px;
+    background-color: green;
+    display: fixed;
+}
+
+.slotHide {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #33302d;
+    width: 100px;
+    height: 60px;
+    background-color: gray;
+    display: fixed;
+}
+
+.invisibleTd {
+    width: 100px;
+    height: 60px;
+    background-color: #333;
+    display: fixed;
+}
+
+.slotSelected {
+    outline: 5px solid #33302d;
+}
+
+table {
+    background-color: #333;
+    border: 5px solid #333;
+}
+
+#itemStats {
+    padding: 0px;
+    width: 222px;
+    height: 222px;
+    background-color: #24303E;
+    border: 0px solid #333;
+}
+
+.whiteText {
+    text-shadow: gray 1px 1px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.inventoryButton {
+    background-color: #BF942C;
+    text-align: center;
+    color: white;
+    text-shadow: gray 1px 1px;
+    width: 95px;
+}
+
+.authButton {
+    background-color: #BF942C;
+    text-align: center;
+    color: white;
+    text-shadow: gray 1px 1px;
+    width: 120px;
+}
+
+
+.buttonAtributePlus {
+    background-color: #BF942C;
+    text-align: center;
+}
+
+.disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+    pointer-events: none; 
+}
+
+.statText {
+    text-shadow: gray 1px 1px;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 275px;
+    padding-right: 25px;
+}
+
+.authText {
+    text-shadow: gray 1px 1px;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding-right: 50px;
+    padding-top: 20px;
+    background-color: #333;
+    display: block;
+    text-align: right;
+}

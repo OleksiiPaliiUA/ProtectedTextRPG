@@ -1,0 +1,63 @@
+{
+  "name": "rpg-bdj",
+  "version": "1.0.0",
+  "description": "Secured RPG game",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "keywords": [
+    "RPG",
+    "text",
+    "blockchain",
+    "secured"
+  ],
+  "author": "Olexii Palii",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.63",
+    "@electron-forge/maker-deb": "^6.0.0-beta.63",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "electron": "^19.0.3",
+    "react-native-bip39": "^2.3.0"
+  },
+  "dependencies": {
+    "bip39": "^3.0.4",
+    "chai": "^4.3.6",
+    "electron-squirrel-startup": "^1.0.0",
+    "jquery": "^3.6.0",
+    "mocha": "^10.0.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "rpg_bdj"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
